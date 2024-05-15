@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcr3wdbjh8mlb"]
+[gd_scene load_steps=15 format=3 uid="uid://bcr3wdbjh8mlb"]
 
 [ext_resource type="Texture2D" uid="uid://crgsegwfwbfqb" path="res://assets/sprites/world_tileset.png" id="1_fi2jo"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_x1j3r"]
 [ext_resource type="PackedScene" uid="uid://cbfefy77nnchy" path="res://scenes/player.tscn" id="2_ti2es"]
 [ext_resource type="PackedScene" uid="uid://bvh0h0ql8udbn" path="res://scenes/platform.tscn" id="3_j2msp"]
 [ext_resource type="PackedScene" uid="uid://depoeh27oybyq" path="res://scenes/coin.tscn" id="4_qdf7t"]
 [ext_resource type="PackedScene" uid="uid://7m5iov33ecbt" path="res://scenes/kill_zone.tscn" id="5_aenng"]
 [ext_resource type="PackedScene" uid="uid://cy407uh36g4f6" path="res://scenes/slime.tscn" id="6_ohli4"]
+[ext_resource type="FontFile" uid="uid://7ba1jbliqwid" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_jcg6x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tkeuw"]
 texture = ExtResource("1_fi2jo")
@@ -454,6 +456,16 @@ _data = {
 [node name="game" type="Node2D"]
 position = Vector2(-3, -21)
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_x1j3r")
+
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = 2574.0
+offset_top = 149.0
+offset_right = 2614.0
+offset_bottom = 172.0
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-47, 251)
 rotation = 3.14159
@@ -497,7 +509,7 @@ position = Vector2(560, 131)
 position = Vector2(377, 270)
 
 [node name="coin4" parent="Coins" instance=ExtResource("4_qdf7t")]
-position = Vector2(1068, 240)
+position = Vector2(2477, 199)
 
 [node name="Platforms" type="Node" parent="."]
 
@@ -515,3 +527,11 @@ autoplay = "move"
 
 [node name="Slime" parent="." instance=ExtResource("6_ohli4")]
 position = Vector2(2668, 341)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2506.0
+offset_top = 218.0
+offset_right = 2698.0
+offset_bottom = 241.0
+theme_override_fonts/font = ExtResource("7_jcg6x")
+text = "Space to Jump"
