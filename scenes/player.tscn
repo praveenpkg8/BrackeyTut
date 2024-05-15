@@ -44,16 +44,18 @@ radius = 11.0
 height = 42.0
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(-34, 9)
+scale = Vector2(0.655459, 0.655459)
 collision_layer = 2
 script = ExtResource("1_ko7hr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(30, -30)
+position = Vector2(-3, -2)
 scale = Vector2(2.875, 2.875)
 sprite_frames = SubResource("SpriteFrames_8ughr")
 animation = &"idle"
 frame_progress = 0.395339
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(30, -19)
+position = Vector2(-3, 6)
 shape = SubResource("CapsuleShape2D_a1h2f")
