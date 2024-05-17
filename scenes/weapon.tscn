@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c14ac8jmyvwi5"]
+
+[ext_resource type="Texture2D" uid="uid://bo2o4cp6w1wn3" path="res://assets/sprites/weapon/64x64/wand2.png" id="1_tihya"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0r867"]
+size = Vector2(5.92672, 45.7568)
+
+[node name="weapon" type="Area2D"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.05078, 0.936707)
+rotation = 1.61852
+scale = Vector2(1.35434, 1.14803)
+shape = SubResource("RectangleShape2D_0r867")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 2.42151
+texture = ExtResource("1_tihya")

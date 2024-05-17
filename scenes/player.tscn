@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://cbfefy77nnchy"]
+[gd_scene load_steps=27 format=3 uid="uid://cbfefy77nnchy"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ko7hr"]
 [ext_resource type="Texture2D" uid="uid://bnne0m0eccaow" path="res://assets/sprites/knight.png" id="1_usyer"]
+[ext_resource type="PackedScene" uid="uid://c14ac8jmyvwi5" path="res://scenes/weapon.tscn" id="3_uphnc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dtqt4"]
 atlas = ExtResource("1_usyer")
@@ -187,3 +188,6 @@ animation = &"run"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 6)
 shape = SubResource("CapsuleShape2D_a1h2f")
+
+[node name="weapon" parent="." instance=ExtResource("3_uphnc")]
+position = Vector2(32.0386, 10.6795)
