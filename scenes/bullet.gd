@@ -34,10 +34,13 @@ func set_direction(_direction):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	print("Bullet g", direction)
 	#var direction = Vector2.RIGHT.rotated(rotation)
 	
 	position += direction * speed * delta
 	traveled_distance += speed * delta
 	if traveled_distance > range:
 		queue_free()
+
+
+func _on_area_entered(area):
+	area.get_parent().queue_free()
