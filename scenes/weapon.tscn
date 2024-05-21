@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bldgjrh2katdw" path="res://scenes/bullet.tscn" id="4_a8p3u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0r867"]
-size = Vector2(5.92672, 45.7568)
+size = Vector2(4.85298, 45.7568)
 
 [node name="weapon" type="Area2D" node_paths=PackedStringArray("weapon_functionality")]
 scale = Vector2(0.279999, 0.279999)
@@ -15,12 +15,6 @@ collision_mask = 3
 script = ExtResource("1_7ge5w")
 weapon_functionality = NodePath("WeaponFunctionaity")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.05078, 0.936707)
-rotation = 1.61852
-scale = Vector2(1.35434, 1.14803)
-shape = SubResource("RectangleShape2D_0r867")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.999999, 0)
 rotation = 2.40444
@@ -28,7 +22,13 @@ texture = ExtResource("1_tihya")
 
 [node name="ShootingPoint" type="Marker2D" parent="Sprite2D"]
 unique_name_in_owner = true
-position = Vector2(-12.7243, -16.3761)
+position = Vector2(-18.0129, -21.1774)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10.7143, 0)
+rotation = 1.61852
+scale = Vector2(0.76993, -0.414805)
+shape = SubResource("RectangleShape2D_0r867")
 
 [node name="WeaponFunctionaity" type="Node" parent="."]
 script = ExtResource("3_cg2qh")

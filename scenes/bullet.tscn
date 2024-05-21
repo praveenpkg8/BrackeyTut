@@ -7,6 +7,8 @@
 
 [node name="bullet" type="Area2D"]
 scale = Vector2(0.4, 0.4)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_p2t3t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,3 +16,5 @@ texture = ExtResource("2_rcjqr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gee41")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
