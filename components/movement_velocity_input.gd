@@ -24,7 +24,6 @@ func handle_movement(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("fire"):
 		var x_axis = movement_animation.process_weapon_side()
-		print("before fire call ", x_axis)
 		var _direction = Vector2(x_axis , 0)
 		weapon.trigger_bullet(_direction)
 		

@@ -6,7 +6,7 @@ extends Node
 @export var weapon: Area2D
 
 
-
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	var weapon_distance = weapon.weapon_functionality.weapon_distance	
 	weapon.global_position.x = actor.global_position.x + weapon_distance
@@ -33,10 +33,7 @@ func process_player_side(direction):
 	var weapon_distance = weapon.weapon_functionality.weapon_distance
 	if direction > 0:
 		animated_sprite.flip_h = false
-		
-		print("ActorWeapon ", weapon.sprite_2d)
 		weapon.global_rotation_degrees = 0	
-		print("Test Weapon", )
 		weapon.global_position.x = actor.global_position.x + weapon_distance
 		
 	elif direction < 0:
